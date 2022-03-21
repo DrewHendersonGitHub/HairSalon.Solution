@@ -21,11 +21,11 @@ _This project uses a one-to-many database to add clients to a specific stylist. 
 
 * _Download or clone ```https://github.com/DrewHendersonGitHub/HairSalon.Solution``` to your computer._
 * _In a terminal inside directory `HairSalon`, make a new file `appsettings.json`._
-* _Add the follwing code with ```{DATABASE}```, ```{USERNAME}```, and ```{PASSWORD}``` replaced with your choice._
+* _Add the following code with ```{DATABASE}```, ```{USERNAME}```, and ```{PASSWORD}``` replaced with your choice._
 ```
 {
   "ConnectionStrings": {
-      "DefaultConnection": "Server=localhost;Port=3306;database={DATABASE HERE};uid={USERNAME};pwd={PASSWORD};"
+      "DefaultConnection": "Server=localhost;Port=3306;database={DATABASE};uid={USERNAME};pwd={PASSWORD};"
   }
 }
 ```
