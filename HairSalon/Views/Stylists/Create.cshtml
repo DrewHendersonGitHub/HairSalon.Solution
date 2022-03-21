@@ -5,6 +5,7 @@
 @model HairSalon.Models.Stylist
 
 <h3><em>New Stylist</em></h3>
+<hr>
 @using (Html.BeginForm())
 {
   @Html.LabelFor(model => model.Name, "Stylist Name: ")
@@ -15,4 +16,5 @@
   <br>
   <input class="btn btn-success" type="submit" value="Submit" />
 }
+<hr>
 <h5>@Html.ActionLink("Back to Stylists", "Index")</h5>
