@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+
+@model HairSalon.Models.Client
+
+<h3><em>Edit Client:</em></h3>
+<hr>
+<h4>Edit @Html.DisplayFor(model => model.Name):</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.ClientId)
+
+  @Html.LabelFor(model => model.Name, "New Client Name: ")
+  @Html.EditorFor(model => model.Name)
+  <br>
+  @Html.LabelFor(model => model.Stylist, "New Stylist: ")
+  @Html.DropDownList("StylistId")
+  <br>
+  <input class="btn btn-success" type="submit" value="Save" />
+}
+<hr>
+<h5>@Html.ActionLink("Back to Clients", "Index")</h5>
