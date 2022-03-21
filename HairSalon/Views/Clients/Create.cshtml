@@ -6,15 +6,23 @@
 
 <h3><em>New Client</em></h3>
 <hr>
-@using (Html.BeginForm())
+@if (ViewBag.num == 0)
 {
-  @Html.LabelFor(model => model.Name, "Client Name: ")
-  @Html.TextBoxFor(model => model.Name)
-  <br>
-  @Html.LabelFor(model => model.Stylist)
-  @Html.DropDownList("StylistId")
-  <br>
-  <input class="btn btn-success" type="submit" value="Submit" />
+  <h5>There are no stylists to add a client to yet.</h5>
+  <h4>@Html.ActionLink("New Stylist", "Create", "Stylists")</h4>
+}
+else
+{
+  @using (Html.BeginForm())
+  {
+    @Html.LabelFor(model => model.Name, "Client Name: ")
+    @Html.TextBoxFor(model => model.Name)
+    <br>
+    @Html.LabelFor(model => model.Stylist, "Stylist:")
+    @Html.DropDownList("StylistId")
+    <br>
+    <input class="btn btn-success" type="submit" value="Submit" />
+  }
 }
 <hr>
 <h5>@Html.ActionLink("Back to Clients", "Index")</h5>

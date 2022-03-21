@@ -11,7 +11,7 @@
   <h4>There aren't any stylists currently in the system.</h4>
 }
 
-@foreach(Stylist s in Model)
+@foreach (Stylist s in Model)
 {
   <li>@Html.ActionLink($"{s.Name}", "Details", new { id = s.StylistId })</li>
 }

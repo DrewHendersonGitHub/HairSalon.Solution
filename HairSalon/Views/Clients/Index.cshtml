@@ -11,7 +11,7 @@
   <h4>There aren't any clients currently in the system.</h4>
 }
 
-@foreach(Client c in Model)
+@foreach (Client c in Model)
 {
   <li>@Html.ActionLink($"{c.Name}", "Details", new { id = c.ClientId }),  @c.Stylist.Name</li>
 }
